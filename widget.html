@@ -36,7 +36,995 @@
     </script>
 </head>
 <body>
-    
+      <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://static.wixstatic.com/media/eb679b_d3f03b4f4cb74639980b0f1351a5204a~mv2.png/v1/fill/w_254,h_120,al_c,q_85,usm_0.66_1.00_0.01/Bakboka%20Logo%20color.webp"
+        alt="Bakboka Logo color.png"
+        style="
+          width: 127px;
+          height: 60px;
+          object-fit: cover;
+          object-position: 50% 50%;
+        "
+      />
+    </a>
+
+    <div class="btn-group me-3" role="group" aria-label="First group">
+      <div class="btn-group me-2" role="group" aria-label="Secondary group">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          data-toggle="modal"
+          data-target="#addModal"
+        >
+          <i class="fa fa-plus"></i>
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="addModal"
+          tabindex="-1"
+          role="form"
+          aria-labelledby="addModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  New Signal
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div elname="columnLayoutOne" class="formColumn first-column">
+                  <div
+                    class="form-group clearfix zc-Email-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Email-label zc_text_label
+                      "
+                      ><span class="zc-label-text">Email</span></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-Email"
+                        class="form-control zc_textfield zc-Email"
+                        maxlength="255"
+                        name="Email"
+                        type="text"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-Team-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Team-label zc_text_label
+                      "
+                      ><span class="zc-label-text">Team</span></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-Team"
+                        class="form-control zc_textfield zc-Team"
+                        maxlength="255"
+                        name="Team"
+                        type="text"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-EditorEmails-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-EditorEmails-label zc_textarea_label
+                      "
+                      ><span class="zc-label-text">Editor Emails</span></label
+                    >
+                    <div class="clearfix form-field mediumSizeLive">
+                      <textarea
+                        id="zc-EditorEmails"
+                        class="form-control zc_textareafield zc-EditorEmails"
+                        name="EditorEmails"
+                        type="text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-ViewerEmails-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-ViewerEmails-label zc_textarea_label
+                      "
+                      ><span class="zc-label-text">Viewer Emails</span></label
+                    >
+                    <div class="clearfix form-field mediumSizeLive">
+                      <textarea
+                        id="zc-ViewerEmails"
+                        class="form-control zc_textareafield zc-ViewerEmails"
+                        name="ViewerEmails"
+                        type="text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      form-group
+                      clearfix
+                      form-image-field
+                      imageopetion
+                      zc-ProfilePhoto-group
+                    "
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-ProfilePhoto-label zc_image_label
+                      "
+                      ><span class="zc-label-text">Profile Photo</span></label
+                    >
+                    <div
+                      class="
+                        form-field
+                        clearfix
+                        mediumSizeLive
+                        zc-toggle-switch
+                      "
+                      name="ProfilePhoto"
+                      type="image"
+                    >
+                      <div class="imageComponents zc-uploadComponents clearfix">
+                        <div class="zc-image-hover-msg zc-dem-text-ellipsis">
+                          Select Image
+                        </div>
+                        <div class="zc-file-upload single">
+                          <div class="filedrag">
+                            <div class="zc-image-local">
+                              <input
+                                name="ProfilePhoto-LOCAL"
+                                type="hidden"
+                              /><input
+                                id="zc-ProfilePhoto_FILE"
+                                class="textfield"
+                                tagfor="formComp"
+                                name="uploadFile"
+                                imagetype="3"
+                                dimension="1"
+                                accept="image/*"
+                                type="file"
+                              />
+                            </div>
+                          </div>
+                          <ul class="filename"></ul>
+                        </div>
+                        <div class="zc-image-link hide" style="display: none">
+                          <input
+                            name="ProfilePhoto.source"
+                            type="text"
+                            placeholder="https://"
+                            elname="zcsource-Image-Field"
+                            class="form-control textfield image-source"
+                            imagetype="3"
+                            dimension="1"
+                            hasalt="false"
+                            hastitle="false"
+                            hasurl="false"
+                          />
+                          <ul class="filename hide" style="display: none">
+                            <li>
+                              <i class="zc-li-outline ui-1-simple-remove"></i>
+                            </li>
+                          </ul>
+                          <a class="zc-link-switch hide"
+                            ><i class="fa fa-upload"></i
+                          ></a>
+                        </div>
+                        <div
+                          class="zc-dem-clearfix zc-image-icons"
+                          style="z-index: 1"
+                        >
+                          <span tabindex="0" class="calcIcon restoreIcon hide"
+                            ><i
+                              class="zc-li-outline arrows-4-undo-29"
+                            ></i></span
+                          ><span
+                            class="calcIcon uploadIcon"
+                            title="Local Computer"
+                            ><i
+                              class="zc-li-outline arrows-2-square-upload"
+                            ></i></span
+                          ><span
+                            tabindex="0"
+                            class="calcIcon linkIcon"
+                            title="URL"
+                            ><i class="zc-li-outline ui-2-link-69"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group clearfix zc-ProfilePhotoTest-group">
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-ProfilePhotoTest-label zc_text_label
+                      "
+                      ><span class="zc-label-text"
+                        >Profile Photo Test</span
+                      ></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-ProfilePhotoTest"
+                        class="form-control zc_textfield zc-ProfilePhotoTest"
+                        maxlength="255"
+                        name="ProfilePhotoTest"
+                        type="text"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group clearfix zc-Title-group">
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Title-label zc_text_label
+                      "
+                      ><span class="zc-label-text">Title</span></label
+                    >
+                    <div class="form-field clearfix">
+                      <input
+                        id="zc-Title"
+                        class="form-control zc_textfield zc-Title"
+                        maxlength="255"
+                        name="Title"
+                        type="text"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group zc-EventDate-group clearfix">
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-EventDate-label zc_date_label
+                      "
+                      ><span class="zc-label-text">Event Date</span></label
+                    >
+                    <div
+                      class="form-field input-group date-field-wrapper clearfix"
+                    >
+                      <div
+                        class="zc-datefield-placeholder adjustInplaceWidth"
+                      ></div>
+                      <input
+                        autocomplete="off"
+                        id="EventDate"
+                        class="form-control zc_datefield zc-EventDate"
+                        name="EventDate"
+                        type="text"
+                      /><span
+                        id="dateButtonEl_EventDate"
+                        class="input-group-addon calcIcon"
+                        ><span class="fa fa-calendar"></span
+                      ></span>
+                    </div>
+                  </div>
+                  <div
+                    class="form-group zc-LastModifiedDate-group clearfix"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-LastModifiedDate-label zc_date_label
+                      "
+                      ><span class="zc-label-text"
+                        >Last Modified Date</span
+                      ></label
+                    >
+                    <div
+                      class="
+                        form-field
+                        input-group
+                        date-field-wrapper
+                        clearfix
+                        mediumSizeLive
+                      "
+                    >
+                      <div class="zc-datefield-placeholder adjustInplaceWidth">
+                        dd-MMM-yyyy
+                      </div>
+                      <input
+                        autocomplete="off"
+                        id="LastModifiedDate"
+                        class="form-control zc_datefield zc-LastModifiedDate"
+                        name="LastModifiedDate"
+                        type="text"
+                      /><span
+                        id="dateButtonEl_LastModifiedDate"
+                        class="input-group-addon calcIcon"
+                        ><span class="fa fa-calendar"></span
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="form-group clearfix zc-Summary-group">
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Summary-label zc_textarea_label
+                      "
+                      ><span class="zc-label-text">Summary</span></label
+                    >
+                    <div class="clearfix form-field">
+                      <textarea
+                        id="zc-Summary"
+                        class="form-control zc_textareafield zc-Summary"
+                        name="Summary"
+                        type="text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-SummaryOriginal-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix
+                        zc-SummaryOriginal-label
+                        zc_textarea_label
+                      "
+                      ><span class="zc-label-text"
+                        >Summary Original</span
+                      ></label
+                    >
+                    <div class="clearfix form-field">
+                      <textarea
+                        id="zc-SummaryOriginal"
+                        class="form-control zc_textareafield zc-SummaryOriginal"
+                        name="SummaryOriginal"
+                        type="text"
+                        disabled="disabled"
+                        readonly="readonly"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      form-group
+                      clearfix
+                      zc-Location-group zc-address-field-group
+                    "
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Location-label zc_address_label
+                      "
+                      ><span class="zc-label-text">Location</span></label
+                    >
+                    <div class="clearfix form-field mediumSizeLive">
+                      <div
+                        class="
+                          flLeft
+                          compositeWrapper
+                          zc_Address_fld zc-Location
+                          composite-odd
+                        "
+                        issubformfield="false"
+                        name="Location"
+                        type="composite"
+                      >
+                        <span class="ADDRESS_LINE_1-wrapper" elname="route"
+                          ><input
+                            class="form-control"
+                            id="route"
+                            name="Location.address_line_1"
+                            type="text"
+                            maxlength="255"
+                          />
+                          <p class="zc-subfield-label">City / District</p></span
+                        >
+                        <div class="composite-two-col-wrapper zc-dem-clearfix">
+                          <span class="COUNTRY-wrapper" elname="country"
+                            ><div
+                              class="select2-container form-control country-sel"
+                              id="s2id_country"
+                            >
+                              <a
+                                href="javascript:void(0)"
+                                class="select2-choice select2-default"
+                                tabindex="-1"
+                              >
+                                <span
+                                  class="select2-chosen"
+                                  id="select2-chosen-712"
+                                  >-Select-</span
+                                ><abbr
+                                  class="select2-search-choice-close"
+                                ></abbr>
+                                <span class="select2-arrow" role="presentation"
+                                  ><b role="presentation"></b></span></a
+                              ><label
+                                for="s2id_autogen712"
+                                class="select2-offscreen"
+                              ></label
+                              ><input
+                                class="select2-focusser select2-offscreen"
+                                type="text"
+                                aria-haspopup="true"
+                                role="button"
+                                aria-labelledby="select2-chosen-712"
+                                id="s2id_autogen712"
+                              />
+                              <div
+                                class="
+                                  select2-drop
+                                  select2-display-none
+                                  select2-with-searchbox
+                                "
+                              >
+                                <div class="select2-search">
+                                  <label
+                                    for="s2id_autogen712_search"
+                                    class="select2-offscreen"
+                                  ></label>
+                                  <input
+                                    type="text"
+                                    autocomplete="off"
+                                    autocorrect="off"
+                                    autocapitalize="off"
+                                    spellcheck="false"
+                                    class="select2-input"
+                                    role="combobox"
+                                    aria-expanded="true"
+                                    aria-autocomplete="list"
+                                    aria-owns="select2-results-712"
+                                    id="s2id_autogen712_search"
+                                    placeholder=""
+                                  />
+                                </div>
+                                <ul
+                                  class="select2-results"
+                                  role="listbox"
+                                  id="select2-results-712"
+                                ></ul>
+                              </div>
+                            </div>
+                            <input class="form-control country-sel" id="country"
+                            name="Location.country" "="" type="text"
+                            tabindex="-1" title="" style="display: none;">
+                            <p class="zc-subfield-label">Country</p></span
+                          >
+                        </div>
+                        <span
+                          class="zc-location-container zc-adjust_location-wrap"
+                          style="display: block"
+                          ><span class="zc-location-content"
+                            ><input
+                              class="zc-adjust-latitude"
+                              id="latitude"
+                              name="Location.latitude"
+                              type="text"
+                              maxlength="20"
+                              disabled=""
+                              style="display: none" /><input
+                              class="zc-adjust-longitude"
+                              id="longitude"
+                              name="Location.longitude"
+                              type="text"
+                              maxlength="20"
+                              disabled=""
+                              style="display: none" /><span
+                              class="zc-location-placeholder"
+                              >Enter an address to plot on map</span
+                            ><i
+                              class="
+                                location-pin
+                                zc-li-solid zc-adjustLocationIcon
+                                disable
+                              "
+                              value="location-pin"
+                              html="location-pin"
+                            ></i
+                          ></span>
+                          <p
+                            class="zc-subfield-label zc-adjustlocation-info"
+                            style="display: none"
+                          >
+                            (Click the icon to adjust location)
+                          </p></span
+                        >
+                      </div>
+                      <input name="Location.status" type="hidden" value="add" />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-UpVote-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-UpVote-label zc_number_label
+                      "
+                      ><span class="zc-label-text">Up Vote</span></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-UpVote"
+                        class="
+                          form-control
+                          zc_numberfield zc_number_field zc-UpVote
+                        "
+                        name="UpVote"
+                        type="text"
+                        maxlength="10"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-DownVote-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-DownVote-label zc_number_label
+                      "
+                      ><span class="zc-label-text">Down Vote</span></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-DownVote"
+                        class="
+                          form-control
+                          zc_numberfield zc_number_field zc-DownVote
+                        "
+                        name="DownVote"
+                        type="text"
+                        maxlength="10"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-UpVotedEmails-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-UpVotedEmails-label zc_textarea_label
+                      "
+                      ><span class="zc-label-text">Up Voted Emails</span></label
+                    >
+                    <div class="clearfix form-field mediumSizeLive">
+                      <textarea
+                        id="zc-UpVotedEmails"
+                        class="form-control zc_textareafield zc-UpVotedEmails"
+                        name="UpVotedEmails"
+                        type="text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-DownVotedEmails-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix
+                        zc-DownVotedEmails-label
+                        zc_textarea_label
+                      "
+                      ><span class="zc-label-text"
+                        >Down Voted Emails</span
+                      ></label
+                    >
+                    <div class="clearfix form-field mediumSizeLive">
+                      <textarea
+                        id="zc-DownVotedEmails"
+                        class="form-control zc_textareafield zc-DownVotedEmails"
+                        name="DownVotedEmails"
+                        type="text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      form-group
+                      clearfix
+                      zc-Tags-group zc-multiselect-field-group
+                    "
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Tags-label zc_list_label
+                      "
+                      ><span class="zc-label-text">Tags</span></label
+                    >
+                    <div
+                      class="
+                        form-field
+                        clearfix
+                        searchable-lookup
+                        mediumSizeLive
+                        zc-Default
+                      "
+                    >
+                      <div
+                        class="
+                          select2-container select2-container-multi
+                          zc-Tags
+                          form-choice-field
+                          zc_list_field
+                        "
+                        id="s2id_autogen715"
+                      >
+                        <ul class="select2-choices">
+                          <li class="select2-search-field">
+                            <label
+                              for="s2id_autogen716"
+                              class="select2-offscreen"
+                            ></label>
+                            <input
+                              type="text"
+                              autocomplete="new-zc-sel2-inp-Tags"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              spellcheck="false"
+                              class="select2-input select2-default"
+                              id="s2id_autogen716"
+                              placeholder=""
+                              name="zc-sel2-inp-Tags"
+                              style="width: 193px"
+                            />
+                          </li>
+                        </ul>
+                        <div
+                          class="
+                            select2-drop select2-drop-multi select2-display-none
+                            Tags-switch-search
+                          "
+                        >
+                          <ul class="select2-results"></ul>
+                        </div>
+                      </div>
+                      <input
+                        class="zc-Tags form-choice-field zc_list_field"
+                        name="Tags"
+                        type="text"
+                        tabindex="-1"
+                        style="display: none"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-Sorting-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Sorting-label zc_number_label
+                      "
+                      ><span class="zc-label-text">Sorting</span></label
+                    >
+                    <div class="form-field clearfix mediumSizeLive">
+                      <input
+                        id="zc-Sorting"
+                        class="
+                          form-control
+                          zc_numberfield zc_number_field zc-Sorting
+                        "
+                        name="Sorting"
+                        type="text"
+                        maxlength="10"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group clearfix zc-Progress-group"
+                    style="display: none"
+                  >
+                    <label
+                      class="
+                        form-label
+                        zc-dem-clearfix zc-Progress-label zc_picklist_label
+                      "
+                      ><span class="zc-label-text">Progress</span></label
+                    >
+                    <div
+                      class="
+                        form-field
+                        clearfix
+                        searchable-lookup
+                        mediumSizeLive
+                        zc-Default
+                      "
+                    >
+                      <div
+                        class="
+                          select2-container
+                          zc-Progress
+                          form-choice-field
+                          zc_picklist_field
+                          select2-allowclear
+                        "
+                        id="s2id_autogen713"
+                      >
+                        <a
+                          href="javascript:void(0)"
+                          class="select2-choice"
+                          tabindex="-1"
+                        >
+                          <span class="select2-chosen" id="select2-chosen-714"
+                            >Shipped</span
+                          ><abbr class="select2-search-choice-close"></abbr>
+                          <span class="select2-arrow" role="presentation"
+                            ><b role="presentation"></b></span></a
+                        ><label
+                          for="s2id_autogen714"
+                          class="select2-offscreen"
+                        ></label
+                        ><input
+                          class="select2-focusser select2-offscreen"
+                          type="text"
+                          aria-haspopup="true"
+                          role="button"
+                          aria-labelledby="select2-chosen-714"
+                          id="s2id_autogen714"
+                          name="zc-sel2-foc-Progress"
+                          autocomplete="new-zc-sel2-foc-Progress"
+                        />
+                        <div
+                          class="
+                            select2-drop select2-display-none
+                            Progress-switch-search
+                            select2-with-searchbox
+                          "
+                        >
+                          <div class="select2-search">
+                            <label
+                              for="s2id_autogen714_search"
+                              class="select2-offscreen"
+                            ></label>
+                            <input
+                              type="text"
+                              autocomplete="new-zc-sel2-inp-Progress"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              spellcheck="false"
+                              class="select2-input"
+                              role="combobox"
+                              aria-expanded="true"
+                              aria-autocomplete="list"
+                              aria-owns="select2-results-714"
+                              id="s2id_autogen714_search"
+                              placeholder=""
+                              name="zc-sel2-inp-Progress"
+                            />
+                          </div>
+                          <ul
+                            class="select2-results"
+                            role="listbox"
+                            id="select2-results-714"
+                          ></ul>
+                        </div>
+                      </div>
+                      <input
+                        class="zc-Progress form-choice-field zc_picklist_field"
+                        name="Progress"
+                        type="text"
+                        tabindex="-1"
+                        title=""
+                        style="display: none"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Add Record
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="btn-group me-2" role="group" aria-label="Third group"></div>
+
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="myModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" style="text-align:center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Menu</h4>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" >
+                <div role="tabpanel">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" id="tabContent" role="tablist">
+                    <li role="presentation">
+                      <a
+                        href="#searchTab"
+                        aria-controls="searchTab"
+                        role="tab"
+                        data-toggle="tab"
+                      >
+                        <button type="button" class="btn btn-link">
+                          <i class="bi bi-search"></i>&#09;
+                        </button></a
+                      >
+                    </li>
+                    <li role="presentation" class="active">
+                      <a
+                        href="#filterTab"
+                        aria-controls="filterTab"
+                        role="tab"
+                        data-toggle="tab"
+                      >
+                        <button type="button" class="btn btn-link">
+                          <i class="fa fa-filter"></i></button
+                      ></a>
+                    </li>
+                    <li role="presentation" class="active">
+                      <a
+                        href="#showAsTab"
+                        aria-controls="showAsTab"
+                        role="tab"
+                        data-toggle="tab"
+                      >
+                        <button type="button" class="btn btn-link">
+                          <i class="fa fa-television"></i></button
+                      ></a>
+                    </li>
+                    <li role="presentation" class="active">
+                      <a
+                        href="#otherTab"
+                        aria-controls="otherTab"
+                        role="tab"
+                        data-toggle="tab"
+                      >
+                        <button type="button" class="btn btn-link">
+                          <i class="fa fa-cog"></i></button
+                      ></a>
+                    </li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="searchTab">
+                    </br>
+                      <h3>Search</h3>
+                      <hr>
+                      <form method="post" name="zc-advSearchForm">
+                        <div class="ZCScrollableWrapper" style="width: 299px; height: 639px;">
+                          <ul class="zc-cb-checkbox-group"><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="ProfilePhoto" comptype="20" eventbinded="true" relatedfield="false" advdisplaysingleoption="true" class=""><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-ProfilePhoto-ZC_4MF142"><label for="checkbox-ProfilePhoto-ZC_4MF142"></label><label for="checkbox-ProfilePhoto-ZC_4MF142">Profile Photo</label></div><div class="zc-cb-form-condtion-group hide" elname="ProfilePhoto" style="opacity: 0; display: none;"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen717"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-718">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen718" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-718" id="s2id_autogen718" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen718_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-718" id="s2id_autogen718_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-718">   </ul></div></div><select elname="ProfilePhoto_op" name="zc_searchSelect" searchcomponenttype="20" delugename="ProfilePhoto" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><div class="select2-container select2-container-multi" id="s2id_autogen733"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen734" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen734" placeholder="" style="width: 15px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none select2-drop-active">   <ul class="select2-results">   </ul></div></div><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="20" delugename="ProfilePhoto" searchname="ProfilePhoto_search" tabindex="-1" style="display: none;"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="Title" comptype="1" eventbinded="true" relatedfield="false" advdisplaysingleoption="true" class=""><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-Title-ZC_4MF142"><label for="checkbox-Title-ZC_4MF142"></label><label for="checkbox-Title-ZC_4MF142">Title</label></div><div class="zc-cb-form-condtion-group hide" elname="Title" style="opacity: 0; display: none;"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen719"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-720">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen720" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-720" id="s2id_autogen720" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen720_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-720" id="s2id_autogen720_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-720">   </ul></div></div><select elname="Title_op" name="zc_searchSelect" searchcomponenttype="1" delugename="Title" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><div class="select2-container select2-container-multi" id="s2id_autogen735"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen736" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen736" placeholder="" style="width: 15px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none select2-drop-active">   <ul class="select2-results">   </ul></div></div><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="1" delugename="Title" searchname="Title_search" tabindex="-1" style="display: none;"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="EditorEmails" comptype="3" eventbinded="true" relatedfield="false" advdisplaysingleoption="true" class=""><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-EditorEmails-ZC_4MF142"><label for="checkbox-EditorEmails-ZC_4MF142"></label><label for="checkbox-EditorEmails-ZC_4MF142">Editor Emails</label></div><div class="zc-cb-form-condtion-group hide" elname="EditorEmails" style="opacity: 0; display: none;"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen721"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-722">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen722" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-722" id="s2id_autogen722" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen722_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-722" id="s2id_autogen722_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-722">   </ul></div></div><select elname="EditorEmails_op" name="zc_searchSelect" searchcomponenttype="3" delugename="EditorEmails" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><div class="select2-container select2-container-multi" id="s2id_autogen737"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen738" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen738" placeholder="" style="width: 15px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none select2-drop-active">
+                        <ul class="select2-results"></ul></div></div><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="3" delugename="EditorEmails" searchname="EditorEmails_search" tabindex="-1" style="display: none;"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="Team" comptype="1" eventbinded="true" relatedfield="false" advdisplaysingleoption="true" class="zc-active-search-block"><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-Team-ZC_4MF142"><label for="checkbox-Team-ZC_4MF142"></label><label for="checkbox-Team-ZC_4MF142">Team</label></div><div class="zc-cb-form-condtion-group hide" elname="Team" style="opacity: 0; display: none;"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen723"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-724">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen724" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-724" id="s2id_autogen724" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen724_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-724" id="s2id_autogen724_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-724">   </ul></div></div><select elname="Team_op" name="zc_searchSelect" searchcomponenttype="1" delugename="Team" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><div class="select2-container select2-container-multi" id="s2id_autogen739"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen740" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen740" placeholder="" style="width: 15px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none select2-drop-active">   <ul class="select2-results">   </ul></div></div><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="1" delugename="Team" searchname="Team_search" tabindex="-1" style="display: none;"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="EventDate" comptype="10" eventbinded="false" relatedfield="false" advdisplaysingleoption="true"><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-EventDate-ZC_4MF142"><label for="checkbox-EventDate-ZC_4MF142"></label><label for="checkbox-EventDate-ZC_4MF142">Event Date</label></div><div class="zc-cb-form-condtion-group hide" elname="EventDate"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen725"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-726">Is</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen726" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-726" id="s2id_autogen726" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen726_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-726" id="s2id_autogen726_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-726">   </ul></div></div><select elname="EventDate_op" name="zc_searchSelect" searchcomponenttype="10" delugename="EventDate" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="20">Before</option><option value="21">After</option><option value="58">between</option><optgroup label="Day"><option value="31">Yesterday</option><option value="32">Today</option><option value="33">Tomorrow</option><option value="34">Last 7 Days</option><option value="35">Last 30 Days</option><option value="36">Last 60 Days</option><option value="37">Last 90 Days</option><option value="38">Last 120 Days</option><option value="64">Last N Days</option><option value="39">Next 7 Days</option><option value="40">Next 30 Days</option><option value="41">Next 60 Days</option><option value="42">Next 90 Days</option><option value="43">Next 120 Days</option><option value="65">Next N Days</option></optgroup><optgroup label="Week"><option value="60">Last Week</option><option value="59">This Week</option><option value="61">Next Week</option><option value="62">Current and Previous Week</option><option value="63">Current and Next Week</option><option value="66">Last N Week</option><option value="67">Next N Week</option></optgroup><optgroup label="Month"><option value="44">Last Month</option><option value="45">This Month</option><option value="46">Next Month</option><option value="47">Current and Previous Month</option><option value="48">Current and Next Month</option><option value="68">Last N Month</option><option value="69">Next N Month</option></optgroup><optgroup label="Year"><option value="51">Last Year</option><option value="52">This Year</option><option value="53">Next Year</option><option value="54">Last 2 Years</option><option value="55">Next 2 Years</option><option value="56">Current and Previous Year</option><option value="57">Current and Next Year</option><option value="70">Last N Years</option><option value="71">Next N Years</option></optgroup></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="10" delugename="EventDate" searchname="EventDate_search" id="viewSearchEl_EventDate" class="zc-advsearch-date" showcalender="true"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"><div style="display:none" elname="EventDate"><div id="rangeSearch_from"><input placeholder="From" type="text" autocomplete="off" fieldtype="10" delugename="EventDate__1211" id="viewSearchEl_EventDate__1211" showcalender="true"></div><div class="search-between" id="rangeSearch_to"><input placeholder="To" type="text" autocomplete="off" fieldtype="10" delugename="EventDate__1212" id="viewSearchEl_EventDate__1212" showcalender="true"></div></div></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="Summary" comptype="3" eventbinded="false" relatedfield="false" advdisplaysingleoption="true"><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-Summary-ZC_4MF142"><label for="checkbox-Summary-ZC_4MF142"></label><label for="checkbox-Summary-ZC_4MF142">Summary</label></div><div class="zc-cb-form-condtion-group hide" elname="Summary"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen727"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-728">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen728" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-728" id="s2id_autogen728" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen728_search" class="select2-offscreen"></label>
+                          <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-728" id="s2id_autogen728_search" placeholder="">
+                        </div>
+                        <ul class="select2-results" role="listbox" id="select2-results-728">
+                        </ul>
+                      </div>
+                    </div>
+                    <select elname="Summary_op" name="zc_searchSelect" searchcomponenttype="3" delugename="Summary" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="3" delugename="Summary" searchname="Summary_search"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li><li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="Email" comptype="1" eventbinded="false" relatedfield="false" advdisplaysingleoption="true"><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-Email-ZC_4MF142"><label for="checkbox-Email-ZC_4MF142"></label><label for="checkbox-Email-ZC_4MF142">Email</label></div><div class="zc-cb-form-condtion-group hide" elname="Email"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen729"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-730">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen730" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-730" id="s2id_autogen730" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen730_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-730" id="s2id_autogen730_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-730">   </ul></div></div><select elname="Email_op" name="zc_searchSelect" searchcomponenttype="1" delugename="Email" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="1" delugename="Email" searchname="Email_search"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li elname="zc-advSortGroupEl" iscompositesearched="false" delugename="ProfilePhotoTest" comptype="1" eventbinded="false" relatedfield="false" advdisplaysingleoption="true"><div class="zc-cb-checkbox" elname="zc-searchCheckBoxEl"><input type="checkbox" class="customCheckbox" id="checkbox-ProfilePhotoTest-ZC_4MF142"><label for="checkbox-ProfilePhotoTest-ZC_4MF142"></label><label for="checkbox-ProfilePhotoTest-ZC_4MF142">Profile Photo Test</label></div><div class="zc-cb-form-condtion-group hide" elname="ProfilePhotoTest"><div class="zc-cb-combo-wrapper"><div class="select2-container zc-cb-select zc-cb-form-control zc-dem-custom-selectbox" id="s2id_autogen731"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-732">Contains</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen732" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-732" id="s2id_autogen732" tabindex="1"><div class="select2-drop select2-display-none zc-dem-custom-selectbox-menu select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen732_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-732" id="s2id_autogen732_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-732">   </ul></div></div><select elname="ProfilePhotoTest_op" name="zc_searchSelect" searchcomponenttype="1" delugename="ProfilePhotoTest" class="zc-cb-select zc-cb-form-control" tabindex="-1" title="" style="display: none;"><option value="18">Is</option><option value="19">Is Not</option><option class="zc-restrictOpt" value="29">Is Empty</option><option class="zc-restrictOpt" value="30">Is Not Empty</option><option value="24">Starts With</option><option value="25">Ends With</option><option value="28">Like</option><option class="zc-restrictOpt" value="26" selected="selected">Contains</option><option class="zc-restrictOpt" value="27">Not Contains</option></select></div><div elname="zc-advviewsearchrow2_SignalsOriginal"><div name="zc-outercontainer"><div name="zc-regularSearch" elname="zc-regularSearch" class="adv-search-textfield"><input elname="zc-regularSearch-Input" islookup="" decimallength="" type="text" autocomplete="off" fieldtype="1" delugename="ProfilePhotoTest" searchname="ProfilePhotoTest_search"></div><div name="zc-rangeSearch" elname="zc-rangeSearch" class="adv-search-textfield range-search-textfield"></div></div></div></div></li></ul></div></form></div>
+                        
+                    <div role="tabpanel" class="tab-pane" id="filterTab">
+                      </br>
+                      <h3>Filter</h3>
+                      <ul class="viewsettingsdrpdwn zc-custom-filter" id="zc-reportfilteritems" fetchoptions="true" elname="reportfilteritems_ZC_4MF142" style="display: block;"><li class="view-settings-subgroup"><a href="javascript:;" elname="zc-navfiltermenuEl" name="autoFilters" class="zc_tab zc_transition zc-autofilter-title selected">Auto filters</a><ul class="zc_tab_comp report_nav_submenu"><li><a href="javascript:;" elname="zc-navmenuEl" class="zc_tab zc_transition autofiltername selected">Tags <i class="fa fa-caret-down pull-right"></i> </a><ul class="zcFilterOptions" fieldlabelname="Tags"><li class="zc_transition "> <a href="javascript:;" elname="zc-reportFilterEl" filtergroupname="Tags" value="Tags:87766000001872023">Afghanistan</a></li><li class="zc_transition "> <a href="javascript:;" elname="zc-reportFilterEl" filtergroupname="Tags" value="Tags:87766000001872031">Biden</a></li><li class="zc_transition "> <a href="javascript:;" elname="zc-reportFilterEl" filtergroupname="Tags" value="Tags:87766000001872035">Food Stamps</a></li><li class="zc_transition "> <a href="javascript:;" elname="zc-reportFilterEl" filtergroupname="Tags" value="Tags:87766000001872027">Taliban</a></li></ul></li><li><a href="javascript:;" elname="zc-navmenuEl" class="zc_tab zc_transition autofiltername">Event Date <i class="fa fa-caret-down pull-right"></i> </a><ul class="zcFilterOptions" fieldlabelname="EventDate"><li class="zc_transition "> <a href="javascript:;" elname="zc-reportFilterEl" filtergroupname="Event Date" value="EventDate:Aug - 2021">Aug - 2021</a></li></ul></li></ul></li></ul>
+                      <hr>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="showAsTab">
+                      </br>
+                      <h3>Show As</h3>
+                      <hr>
+                      <ul class="zc_tab_comp report_nav_submenu"><li><a href="javascript:;" elname="zc-changeReportType" reporttype="1">List</a></li><li><a href="javascript:;" elname="zc-changeReportType" reporttype="2" class="zc_transition">Calendar</a></li><li><a href="javascript:;" elname="zc-changeReportType" reporttype="15" class="zc_transition">Timeline</a></li></ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="otherTab">
+                      </br>
+                      <h3>Other</h3>
+                      <hr>
+                      <h4>Print Options</h4>
+                      <ul class="zc_tab_comp report_nav_submenu"><li><a elname="zc-printReportEl" printtype="list" href="javascript:;" class="link zc_transition">Print as list</a></li><li><a elname="zc-printReportEl" printtype="summary" href="javascript:;" class="link">Print as Summary</a></li></ul></li>
+                      <hr>
+                      <h4>Import Data</h4>
+                      <hr>
+                      <h4>Export Data</h4>
+                    </div>
+                    <!-- Print / Import / Export -->
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary save">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </body>
 <!-- Footer -->
   <footer
