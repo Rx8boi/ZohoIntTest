@@ -53,7 +53,17 @@
         //   });
         // });
         // working on this code
+                ZOHO.CREATOR.API.getAllRecords(config).then(function (response) {
+          var recordArr = response.data;
+          for (var index in recordArr) {
+            console.log(recordArr[index]);
+          }
         });
+        //Parse data that was fetched into HTML Elements
+        // function setRecordData(rec){
+        //   console.log(rec)
+        // }
+      });
     </script>
 </head>
 <body>
