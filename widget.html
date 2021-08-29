@@ -31,8 +31,29 @@
     ></script>
     <script src="https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script>
 
+   <script src="https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script>
+
     <script>
-        // Zoho Creator API script
+      // initial attempt
+      ZOHO.CREATOR.init().then(function (data) {
+        var queryParams = ZOHO.CREATOR.UTIL.getQueryParams();
+        var recordId = queryParams["pid"];
+        var config = {
+          reportName: "All_Contacts",
+          criteria: '(Status != "Closed" )',
+          page: 1,
+          pageSize: 200,
+        };
+
+        //Get Record Details from RecrdID
+        //   ZOHO.CREATOR.API.getALLRecords(config).then(function(response){
+        //     if(response.data.length > 0){
+        //       setRecordData(response.data[0]);
+        //     }
+        //   });
+        // });
+        // working on this code
+        });
     </script>
 </head>
 <body>
